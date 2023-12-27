@@ -50,7 +50,7 @@ parser.add_argument('--optimizer', default='adam',
                     help='adam or momentum [default: adam]')
 parser.add_argument('--seed', type=int, default=20, metavar='S',
                     help='random seed (default: 20)')
-parser.add_argument('--log_dir', default='NIDALoc-Results-NCLT-step-500/',
+parser.add_argument('--log_dir', default='NIDALoc/',
                     help='Log dir [default: log]')
 parser.add_argument('--dataset_folder', default='/home/data',
                     help='Our Dataset Folder')
@@ -181,10 +181,6 @@ def train():
     loss         = Criterion()
     model        = model.to(device)
     loss         = loss.to(device)
-
-    # input = torch.randn(5, 4096, 3).to(device) #batch_size=1
-    # flops, params = profile(model, inputs=(input, ))
-    # print(flops/1e9,params/1e6) #flops/G，para/M
 
     if FLAGS.optimizer == 'momentum':
         optimizer = torch.optim.SGD(model.parameters(), FLAGS.init_learning_rate)

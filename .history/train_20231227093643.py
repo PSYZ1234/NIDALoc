@@ -182,6 +182,10 @@ def train():
     model        = model.to(device)
     loss         = loss.to(device)
 
+    # input = torch.randn(5, 4096, 3).to(device) #batch_size=1
+    # flops, params = profile(model, inputs=(input, ))
+    # print(flops/1e9,params/1e6) #flops/G，para/M
+
     if FLAGS.optimizer == 'momentum':
         optimizer = torch.optim.SGD(model.parameters(), FLAGS.init_learning_rate)
     elif FLAGS.optimizer == 'adam':
