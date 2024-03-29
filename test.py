@@ -15,7 +15,7 @@ from data.OxfordVelodyne_datagenerator import RobotCar
 from data.NCLT_datagenerator import NCLT
 from data.composition import MF
 from data.augment import get_augmentations_from_list, Normalize
-from models.model import BRLoc
+from models.model import NIDALoc
 from utils.pose_util import val_translation, val_rotation, val_classification, qexp
 from tensorboardX import SummaryWriter
 from torch.backends import cudnn
@@ -139,7 +139,7 @@ def setup_seed(seed):
 def test():
     setup_seed(FLAGS.seed)
     val_writer   = SummaryWriter(os.path.join(FLAGS.log_dir, 'valid'))
-    model        = BRLoc()
+    model        = NIDALoc()
     model        = model.to(device)
     resume_filename  = FLAGS.log_dir + FLAGS.resume_model
     print("Resuming From ", resume_filename)
