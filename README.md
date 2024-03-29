@@ -11,7 +11,7 @@ NIDALoc: Neurobiologically Inspired Deep LiDAR Localization
 ## Data
 
 We support the Oxford Radar RobotCar and NCLT datasets right now.
-
+```
 Oxford data_root
 ├── 2019-01-11-14-02-26-radar-oxford-10k
 │   ├── velodyne_left
@@ -20,7 +20,7 @@ Oxford data_root
 ├── pose_max_min.txt
 ├── train_split.txt
 ├── test_split.txt
-
+```
 
 ## Run
 ### Oxford
