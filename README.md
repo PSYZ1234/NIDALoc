@@ -44,9 +44,9 @@ python train.py
   author={Yu, Shangshu and Sun, Xiaotian and Li, Wen and Wen, Chenglu and Yang, Yunuo and Si, Bailu and Hu, Guosheng and Wang, Cheng},
   journal={IEEE Transactions on Intelligent Transportation Systems}, 
   title={NIDALoc: Neurobiologically Inspired Deep LiDAR Localization}, 
-  year={2023},
-  volume={},
-  number={},
-  pages={1-12},
-  doi={10.1109/TITS.2023.3324700}}
+  year={2024},
+  volume={25},
+  number={5},
+  pages={4278-4289}
+}
 ```
